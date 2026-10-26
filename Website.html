@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Domain Page</title>
+  <style>
+    /* Reset default margins, padding, and borders */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Force solid white background and full height */
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      color: #000000;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      overflow: hidden;
+    }
+
+    /* Minimal top-left domain display */
+    #domain-name {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: 1rem;
+      font-weight: normal;
+      line-height: 1;
+      letter-spacing: normal;
+      user-select: all;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Dynamic Domain Display -->
+  <div id="domain-name"></div>
+
+  <script>
+    // Set the text content to current domain or fallback if empty
+    const hostname = window.location.hostname || 'example.com';
+    document.getElementById('domain-name').textContent = hostname;
+    document.title = hostname;
+  </script>
+
+</body>
+</html>
